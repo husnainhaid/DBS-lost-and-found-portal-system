@@ -1,0 +1,15 @@
+/* ----------------------------
+   Global styling
+----------------------------- */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ----------------------------
+   Hero Section
+----------------------------- */
+.hero-section {
+    height: 40vh;
+    background: linear-gradient(to right, #0066cc, #003d99);
+    margin-bottom: 30px;
+}
