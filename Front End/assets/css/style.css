@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 /* ----------------------------
    Global styling
@@ -14,6 +15,8 @@ body {
     background: linear-gradient(to right, #0066cc, #003d99);
     margin-bottom: 30px;
 
+=======
+>>>>>>> dba824fb9b679f1216887d3adfe6c74be662860d
 /* nav bar Styling */
 .navbar .navbar-brand {
     margin: 0;
@@ -68,6 +71,9 @@ textarea:hover {
 .footer a {
     color: #007bff;
     text-decoration: none;
+<<<<<<< HEAD
 >>>>>>> f26ce39 (Initial commit)
 }
+=======
+>>>>>>> dba824fb9b679f1216887d3adfe6c74be662860d
 }
