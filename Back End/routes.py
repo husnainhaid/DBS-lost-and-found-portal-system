@@ -16,12 +16,17 @@ def get_items():
     return jsonify(items), 200
 @item_bp.route("/health", methods=["GET"])
 def health():
-    return {"status": "backend running"}, 200
+    return {"status1": "backend running"}, 200
 
-@item_bp.route("/items/search/<keyword>", methods=["GET"])
-def search(keyword):
-    items = models.search_items(keyword)
-    return jsonify(items), 200
+def search_items(keyword):
+    db = get_db()
+    rows = db.execute("""
+        SELECT * FROM items
+        WHERE item_name LIKE ? OR description LIKE ? OR location_found LIKE ?
+    """, (f"%{keyword}%", f"%{keyword}%", f"%{keyword}%")).fetchall()
+    db.close()
+    return [dict(row) for row in rows]
+
 
 
 
