@@ -31,4 +31,4 @@ def create_item():
         return jsonify({"error": "Invalid JSON"}), 400
 
     models.create_item(data)
-    return jsonify({"message": "Item created successfully"}), 201Implemented routes.py with structured Flask API endpoints for items including GET, POST, PUT, and DELETE
+    return jsonify({"message": "Item created successfully"}), 
