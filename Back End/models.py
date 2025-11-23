@@ -28,5 +28,13 @@ def create_item(data):
         data["date_found"],
         "unclaimed"
     ))
+
+    def get_item_by_id(item_id):
+    db = get_db()
+    row = db.execute("SELECT * FROM items WHERE id = ?", (item_id,)).fetchone()
+    db.close()
+    return dict(row) if row else None
     db.commit()
     db.close()
+
+    
