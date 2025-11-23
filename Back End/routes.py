@@ -14,38 +14,15 @@ def get_items():
     """
     items = models.get_all_items()
     return jsonify(items), 200
+@item_bp.route("/health", methods=["GET"])
+def health():
+    return {"status": "backend running"}, 200
+
+@item_bp.route("/items/search/<keyword>", methods=["GET"])
+def search(keyword):
+    items = models.search_items(keyword)
+    return jsonify(items), 200
 
 
-# -----------------------------------------------------------
-# POST a new item (Create)
-# -----------------------------------------------------------
-@item_bp.route("/items", methods=["POST"])
-def create_item():
-    """
-    Creates a new lost item entry in the database.
-    Expects JSON data with student_name, student_email, item_name,
-    description, location_found, and date_found.
-    """
-    data = request.get_json()
-    if not data:
-        return jsonify({"error": "Invalid JSON"}), 400
 
-    models.create_item(data)
-    return jsonify({"message": "Item created successfully"}), 
 
-# -----------------------------------------------------------
-# POST a new item (Create)
-# -----------------------------------------------------------
-@item_bp.route("/items", methods=["POST"])
-def create_item():
-    """
-    Creates a new lost item entry in the database.
-    Expects JSON data with student_name, student_email, item_name,
-    description, location_found, and date_found.
-    """
-    data = request.get_json()
-    if not data:
-        return jsonify({"error": "Invalid JSON"}), 400
-
-    models.create_item(data)
-    return jsonify({"message": "Item created successfully"}), 
