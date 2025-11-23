@@ -1,79 +1,31 @@
-<<<<<<< HEAD
+/* ============================================
+   DBS Lost and Found Portal - Global Styles
+   ============================================ */
 
-/* ----------------------------
-   Global styling
------------------------------ */
-body {
-    font-family: "Segoe UI", Arial, sans-serif;
-}
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* ----------------------------
-   Hero Section
------------------------------ */
-.hero-section {
-    height: 40vh;
-    background: linear-gradient(to right, #0066cc, #003d99);
-    margin-bottom: 30px;
-
-=======
->>>>>>> dba824fb9b679f1216887d3adfe6c74be662860d
-/* nav bar Styling */
-.navbar .navbar-brand {
-    margin: 0;
-}
-
-.navbar img {
-    object-fit: contain;
-}
-
-/* Card styling */
-.card {
-    border-radius: 14px !important;
-}
-
-.card-header {
-    font-size: 1.2rem;
-}
-
-/* Inputs */
-input, select, textarea {
-     transition: all 0.25s ease-in-out !important;
-    border-radius: 8px !important;
-     transform: scale(1);  
-}
-/* Focus animation */
-input:focus,
-select:focus,
-textarea:focus {
-    border: 2px solid #0066cc !important;
-    box-shadow: 0 0 8px rgba(0, 102, 204, 0.4) !important;
-    transform: scale(1.02);   /* Smooth zoom */
-    background-color: #2a3138;
-}
-
-/* Hover effect */
-input:hover,
-select:hover,
-textarea:hover {
-    border-color: #003d99 !important;
-    transition: 0.25s ease-in-out;
-}
-
-
-/* Footer */
-.footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9rem;
-    color: #555;
-    margin-top: 40px;
-}
-.footer a {
-    color: #007bff;
-    text-decoration: none;
-<<<<<<< HEAD
->>>>>>> f26ce39 (Initial commit)
-}
-=======
->>>>>>> dba824fb9b679f1216887d3adfe6c74be662860d
+/* ============================================
+   CSS Custom Properties (Design Tokens)
+   ============================================ */
+:root {
+  /* Color Palette - DBS Brand Colors */
+  --primary-color: #1e40af;
+  --primary-dark: #1e3a8a;
+  --primary-light: #3b82f6;
+  --secondary-color: #0891b2;
+  --accent-color: #f59e0b;
+  
+  /* Neutral Colors */
+  --white: #ffffff;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
 }

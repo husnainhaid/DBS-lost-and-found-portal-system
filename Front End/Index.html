@@ -1,129 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Report Lost Item – DBS Lost & Found</title>
-
-<<<<<<< HEAD
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dublin Business School Lost and Found Portal - Report and search for lost items on campus">
+  <title>DBS Lost and Found Portal</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/toast.css">
 </head>
-
-<body class="bg-light">
-
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-dark bg-primary shadow">
-        <div class="container d-flex justify-content-between align-items-center">
-
-            <!-- LEFT: DBS LOGO -->
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="assets/img/download (1).jpg" 
-                     alt="DBS Logo" 
-                     style="height: 45px; margin-right: 10px;">
-            </a>
-
-            <!-- CENTER: TITLE -->
-            <div class="mx-auto text-center">
-                <span class="navbar-brand fw-bold">
-                    Dublin Business School Lost and Found Portal System
-                </span>
-            </div>
-
-            <!-- RIGHT: EMPTY SPACE -->
-            <div style="width: 60px;"></div>
-
-        </div>
-    </nav>
-
-    <!-- FORM CONTAINER -->
-    <div class="container col-lg-8 col-md-10 mt-5">
-=======
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-
 <body>
-
-    <nav class="navbar navbar-dark bg-primary shadow">
-    <div class="container d-flex justify-content-between align-items-center">
-
-        <!-- LEFT: DBS LOGO -->
-        <a class="navbar-brand d-flex align-items-center" href="#">
-            <img src="assets/img/download (1).jpg" 
-                 alt="DBS Logo" 
-                 style="height: 45px; margin-right: 10px;">
-        </a>
-
-        <!-- CENTER: TITLE -->
-        <div class="mx-auto text-center">
-            <span class="navbar-brand fw-bold">
-                Dublin Business School Lost and Found Portal System
-            </span>
-        </div>
-
-        <!-- RIGHT: EMPTY SPACE (keeps center alignment correct) -->
-        <div style="width: 60px;"></div>
-
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-brand">
+        <img src="assets/img/download (1).jpg" alt="DBS Logo" class="navbar-logo">
+        <span>Lost & Found</span>
+      </a>
+      
+      <button class="navbar-toggle" id="navToggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+      
+      <ul class="navbar-menu" id="navMenu">
+        <li><a href="index.html" class="navbar-link active">Home</a></li>
+        <li><a href="report.html" class="navbar-link">Report Item</a></li>
+        <li><a href="search.html" class="navbar-link">Search Items</a></li>
+        <li><a href="admin.html" class="navbar-link">Admin</a></li>
+      </ul>
     </div>
-</nav>
-    <!-- FORM CONTAINER -->
-    <div class="container col-lg-8 col-md-10 mt-5">
-
->>>>>>> dba824fb9b679f1216887d3adfe6c74be662860d
-        <div class="card shadow-sm border-0 rounded-4">
-            <div class="card-header bg-dark text-white fw-bold rounded-top-4">
-                Lost Item Report Form
-            </div>
-
-            <div class="card-body p-4">
-
-                <form id="lostItemForm" class="row g-4">
-
-                    <!-- USER DETAILS -->
-                    <div class="col-12">
-                        <h5 class="fw-bold text-primary">Your Details</h5>
-                        <hr>
-                    </div>
-
-                    <div class="col-md-6">
-                        <label class="form-label fw-semibold">Full Name</label>
-                        <input type="text" name="student_name" class="form-control p-2" placeholder="John Doe" required>
-                    </div>
-
-                    <div class="col-md-6">
-                        <label class="form-label fw-semibold">DBS Email</label>
-                        <input type="email" name="student_email" class="form-control p-2"
-                               placeholder="yourname@student.dbs.ie" required>
-                    </div>
-
-                    <!-- ITEM DETAILS -->
-                    <div class="col-12 mt-3">
-                        <h5 class="fw-bold text-primary">Lost Item Details</h5>
-                        <hr>
-                    </div>
-
-                    <div class="col-md-6">
-                        <label class="form-label fw-semibold">Item Name</label>
-                        <input type="text" name="item_name" class="form-control p-2"
-                               placeholder="Example: Black Wallet, Lenovo Laptop, iPhone 12..." required>
-                    </div>
-
-<<<<<<< HEAD
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <script src="asse
-=======
-                  
-
-    <script src="assets/js/main.js"></script>
-
-</body>
-</html>
->>>>>>> dba824fb9b679f1216887d3adfe6c74be662860d
+  </nav>
