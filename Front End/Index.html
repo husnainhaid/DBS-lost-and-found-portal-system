@@ -7,15 +7,15 @@
   <title>DBS Lost and Found Portal</title>
   
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/toast.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <!-- Navigation Bar -->
   <nav class="navbar">
     <div class="navbar-container">
       <a href="index.html" class="navbar-brand">
-        <img src="assets/img/download (1).jpg" alt="DBS Logo" class="navbar-logo">
+        <img src="assets/logo.png" alt="DBS Logo" class="navbar-logo">
         <span>Lost & Found</span>
       </a>
       
@@ -32,6 +32,100 @@
     </div>
   </nav>
 
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1 class="hero-title">Welcome to DBS Lost & Found</h1>
+      <p class="hero-description">
+        Lost something on campus? Found an item? Our portal makes it easy to report and search for lost items at Dublin Business School.
+      </p>
+      <div class="hero-actions">
+        <a href="report.html" class="btn btn-primary btn-lg">Report Lost Item</a>
+        <a href="search.html" class="btn btn-secondary btn-lg">Search Items</a>
+      </div>
+    </section>
+
+    <!-- Information Cards -->
+    <section class="page-header">
+      <h2 class="page-title">How It Works</h2>
+      <p class="page-subtitle">Three simple steps to reunite with your belongings</p>
+    </section>
+
+    <div class="cards-grid">
+      <!-- Card 1: Report -->
+      <div class="card">
+        <div class="card-content">
+          <div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">📝</div>
+          <h3 class="card-title">1. Report an Item</h3>
+          <p class="card-description">
+            Found something on campus? Fill out our simple form with details about the item, where you found it, and how to contact you.
+          </p>
+          <a href="report.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Report Now</a>
+        </div>
+      </div>
+
+      <!-- Card 2: Search -->
+      <div class="card">
+        <div class="card-content">
+          <div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">🔍</div>
+          <h3 class="card-title">2. Search for Items</h3>
+          <p class="card-description">
+            Lost something? Browse our database of found items. Use filters and search to quickly find what you're looking for.
+          </p>
+          <a href="search.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Search Now</a>
+        </div>
+      </div>
+
+      <!-- Card 3: Claim -->
+      <div class="card">
+        <div class="card-content">
+          <div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">✅</div>
+          <h3 class="card-title">3. Claim Your Item</h3>
+          <p class="card-description">
+            Found your item? Contact the person who found it or visit the campus security office to claim your belongings.
+          </p>
+          <a href="search.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">View Items</a>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <!-- Contact Information -->
+    <section class="page-header" style="margin-top: 3rem;">
+      <h2 class="page-title">Need Help?</h2>
+      <p class="page-subtitle">Contact our campus security office</p>
+    </section>
+
+    <div style="background: white; padding: 2rem; border-radius: 0.75rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); max-width: 600px; margin: 0 auto; text-align: center;">
+      <p style="margin-bottom: 1rem; color: #4b5563; font-size: 1rem;">
+        <strong>Campus Security Office</strong><br>
+        Ground Floor, Main Building<br>
+        Monday - Friday: 8:00 AM - 8:00 PM<br>
+        Saturday: 9:00 AM - 5:00 PM
+      </p>
+      <p style="color: #4b5563; font-size: 1rem;">
+        📧 Email: <a href="mailto:security@dbs.ie" style="color: #1e40af; text-decoration: underline;">security@dbs.ie</a><br>
+        📞 Phone: +353 1 417 7500
+      </p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="footer-text">
+        &copy; 2025 Dublin Business School. All rights reserved.<br>
+        Lost & Found Portal - Helping students reunite with their belongings.
+      </p>
+    </div>
+  </footer>
+
   <!-- Scripts -->
-  <script src="js/toast.js"></script>
+  <script src="assets/js/toast.js"></script>
+  <script src="js/api.js"></script>
   
+  
+</body>
+</html>
