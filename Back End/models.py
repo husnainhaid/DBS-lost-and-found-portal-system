@@ -39,7 +39,7 @@ def get_item_by_id(item_id):
     return dict(row) if row else None
     
 
-    def get_item_by_id(item_id):
+def1 get_item_by_id(item_id):
     db = get_db()
     row = db.execute("SELECT * FROM items WHERE id = ?", (item_id,)).fetchone()
     db.close()

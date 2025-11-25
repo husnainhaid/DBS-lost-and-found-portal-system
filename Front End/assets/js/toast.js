@@ -1,8 +1,3 @@
-/**
- * Toast Notification Component
- * Provides a reusable toast notification system with multiple variants
- * and automatic dismissal functionality.
- */
 
 class ToastManager {
   constructor() {
@@ -11,11 +6,9 @@ class ToastManager {
     this.init();
   }
 
-  /**
-   * Initialize the toast container
-   */
+
   init() {
-    // Create container if it doesn't exist
+    
     if (!document.querySelector('.toast-container')) {
       this.container = document.createElement('div');
       this.container.className = 'toast-container';
@@ -26,23 +19,23 @@ class ToastManager {
   }
 
   /**
-   * Show a toast notification
-   * @param {string} message - The message to display
-   * @param {string} type - Toast type: 'success', 'error', 'warning', 'info'
-   * @param {number} duration - Duration in milliseconds (default: 4000)
-   * @param {string} title - Optional title for the toast
+   
+   * @param {string} message 
+   * @param {string} type 
+   * @param {number} duration 
+   * @param {string} title 
    */
   show(message, type = 'info', duration = 4000, title = '') {
     const toast = this.createToast(message, type, duration, title);
     this.container.appendChild(toast);
     this.toasts.push(toast);
 
-    // Trigger animation
+    
     setTimeout(() => {
       toast.style.opacity = '1';
     }, 10);
 
-    // Auto dismiss
+    
     if (duration > 0) {
       setTimeout(() => {
         this.dismiss(toast);
@@ -53,20 +46,20 @@ class ToastManager {
   }
 
   /**
-   * Create a toast element
+   
    * @private
    */
   createToast(message, type, duration, title) {
     const toast = document.createElement('div');
     toast.className = `toast ${type}`;
 
-    // Get icon based on type
+    
     const icon = this.getIcon(type);
 
-    // Determine title
+    
     const toastTitle = title || this.getDefaultTitle(type);
 
-    // Build toast HTML
+    
     toast.innerHTML = `
       <div class="toast-icon">${icon}</div>
       <div class="toast-content">
@@ -77,7 +70,7 @@ class ToastManager {
       ${duration > 0 ? `<div class="toast-progress" style="animation-duration: ${duration}ms;"></div>` : ''}
     `;
 
-    // Add close button handler
+    
     const closeBtn = toast.querySelector('.toast-close');
     closeBtn.addEventListener('click', () => {
       this.dismiss(toast);
@@ -87,7 +80,7 @@ class ToastManager {
   }
 
   /**
-   * Get icon for toast type
+   * 
    * @private
    */
   getIcon(type) {
@@ -101,7 +94,7 @@ class ToastManager {
   }
 
   /**
-   * Get default title for toast type
+   * 
    * @private
    */
   getDefaultTitle(type) {
@@ -115,8 +108,8 @@ class ToastManager {
   }
 
   /**
-   * Dismiss a toast
-   * @param {HTMLElement} toast - The toast element to dismiss
+   * 
+   * @param {HTMLElement} toast 
    */
   dismiss(toast) {
     toast.classList.add('removing');
@@ -126,16 +119,16 @@ class ToastManager {
         toast.parentNode.removeChild(toast);
       }
       
-      // Remove from array
+      
       const index = this.toasts.indexOf(toast);
       if (index > -1) {
         this.toasts.splice(index, 1);
       }
-    }, 300); // Match animation duration
+    }, 300); 
   }
 
   /**
-   * Dismiss all toasts
+   * 
    */
   dismissAll() {
     this.toasts.forEach(toast => {
@@ -144,21 +137,21 @@ class ToastManager {
   }
 }
 
-// Create global instance
+
 const toastManager = new ToastManager();
 
 /**
- * Convenience function to show toast
- * @param {string} message - The message to display
- * @param {string} type - Toast type: 'success', 'error', 'warning', 'info'
- * @param {number} duration - Duration in milliseconds
- * @param {string} title - Optional title
+ * 
+ * @param {string} message 
+ * @param {string} type 
+ * @param {number} duration 
+ * @param {string} titl
  */
 function showToast(message, type = 'info', duration = 4000, title = '') {
   return toastManager.show(message, type, duration, title);
 }
 
-// Export for use in other scripts
+
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { ToastManager, showToast };
 }

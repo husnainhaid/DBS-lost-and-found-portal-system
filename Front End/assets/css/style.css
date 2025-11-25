@@ -1,15 +1,8 @@
-/* ============================================
-   DBS Lost and Found Portal - Global Styles
-   ============================================ */
 
-/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* ============================================
-   CSS Custom Properties (Design Tokens)
-   ============================================ */
 :root {
-  /* Color Palette - DBS Brand Colors */
+ 
   --primary-color: #1e40af;
   --primary-dark: #1e3a8a;
   --primary-light: #3b82f6;
@@ -82,9 +75,7 @@
   --header-height: 70px;
 }
 
-/* ============================================
-   Reset & Base Styles
-   ============================================ */
+
 * {
   margin: 0;
   padding: 0;
@@ -119,9 +110,7 @@ a {
   transition: color var(--transition-fast);
 }
 
-/* ============================================
-   Navigation Bar
-   ============================================ */
+
 .navbar {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
   color: var(--white);
@@ -180,7 +169,7 @@ a {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Mobile Menu Toggle */
+
 .navbar-toggle {
   display: none;
   background: none;
@@ -190,9 +179,7 @@ a {
   cursor: pointer;
 }
 
-/* ============================================
-   Container & Layout
-   ============================================ */
+
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -218,9 +205,7 @@ a {
   font-weight: 400;
 }
 
-/* ============================================
-   Hero Section (Index Page)
-   ============================================ */
+
 .hero {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   color: var(--white);
@@ -253,9 +238,7 @@ a {
   flex-wrap: wrap;
 }
 
-/* ============================================
-   Buttons
-   ============================================ */
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -339,9 +322,7 @@ a {
   font-size: var(--font-size-lg);
 }
 
-/* ============================================
-   Forms
-   ============================================ */
+
 .form {
   background: var(--white);
   padding: var(--spacing-xl);
@@ -420,77 +401,9 @@ a {
   height: auto;
 }
 
-/* ============================================
-   Cards
-   ============================================ */
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: var(--spacing-lg);
-  margin-top: var(--spacing-xl);
-}
 
-.card {
-  background: var(--white);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  overflow: hidden;
-  transition: all var(--transition-base);
-  cursor: pointer;
-  border: 2px solid transparent;
-}
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-xl);
-  border-color: var(--primary-light);
-}
 
-.card-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  background-color: var(--gray-200);
-}
-
-.card-content {
-  padding: var(--spacing-lg);
-}
-
-.card-title {
-  font-size: var(--font-size-xl);
-  font-weight: 600;
-  color: var(--gray-900);
-  margin-bottom: var(--spacing-sm);
-}
-
-.card-description {
-  color: var(--gray-600);
-  margin-bottom: var(--spacing-md);
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.card-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-md);
-  font-size: var(--font-size-sm);
-  color: var(--gray-500);
-  margin-bottom: var(--spacing-md);
-}
-
-.card-meta-item {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-xs);
-}
-
-/* ============================================
-   Status Badges
-   ============================================ */
 .badge {
   display: inline-flex;
   align-items: center;
@@ -520,68 +433,9 @@ a {
   border: 1px solid var(--status-returned);
 }
 
-/* ============================================
-   Search & Filter Bar
-   ============================================ */
-.search-bar {
-  background: var(--white);
-  padding: var(--spacing-lg);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  margin-bottom: var(--spacing-xl);
-}
 
-.search-input-wrapper {
-  position: relative;
-  margin-bottom: var(--spacing-md);
-}
 
-.search-input {
-  width: 100%;
-  padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) 3rem;
-  border: 2px solid var(--gray-300);
-  border-radius: var(--radius-md);
-  font-size: var(--font-size-lg);
-  transition: all var(--transition-fast);
-}
 
-.search-input:focus {
-  outline: none;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
-}
-
-.search-icon {
-  position: absolute;
-  left: var(--spacing-md);
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--gray-400);
-  font-size: var(--font-size-xl);
-}
-
-.filter-controls {
-  display: flex;
-  gap: var(--spacing-md);
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.filter-label {
-  font-weight: 600;
-  color: var(--gray-700);
-  font-size: var(--font-size-sm);
-}
-
-.sort-buttons {
-  display: flex;
-  gap: var(--spacing-sm);
-  flex-wrap: wrap;
-}
-
-/* ============================================
-   Table (Admin Page)
-   ============================================ */
 .table-wrapper {
   background: var(--white);
   border-radius: var(--radius-lg);
@@ -628,9 +482,7 @@ a {
   gap: var(--spacing-sm);
 }
 
-/* ============================================
-   Modal
-   ============================================ */
+
 .modal-overlay {
   display: none;
   position: fixed;
@@ -703,53 +555,9 @@ a {
   justify-content: flex-end;
 }
 
-/* ============================================
-   Stats Dashboard (Admin)
-   ============================================ */
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--spacing-lg);
-  margin-bottom: var(--spacing-xl);
-}
 
-.stat-card {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-  color: var(--white);
-  padding: var(--spacing-xl);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  text-align: center;
-}
 
-.stat-card.success {
-  background: linear-gradient(135deg, var(--success) 0%, #059669 100%);
-}
 
-.stat-card.warning {
-  background: linear-gradient(135deg, var(--warning) 0%, #d97706 100%);
-}
-
-.stat-card.error {
-  background: linear-gradient(135deg, var(--error) 0%, #dc2626 100%);
-}
-
-.stat-value {
-  font-size: var(--font-size-4xl);
-  font-weight: 700;
-  margin-bottom: var(--spacing-sm);
-}
-
-.stat-label {
-  font-size: var(--font-size-sm);
-  opacity: 0.9;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* ============================================
-   Footer
-   ============================================ */
 .footer {
   background: var(--gray-900);
   color: var(--white);
@@ -768,9 +576,7 @@ a {
   font-size: var(--font-size-sm);
 }
 
-/* ============================================
-   Utility Classes
-   ============================================ */
+
 .text-center {
   text-align: center;
 }
@@ -791,9 +597,7 @@ a {
   display: none !important;
 }
 
-/* ============================================
-   Animations
-   ============================================ */
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -814,9 +618,7 @@ a {
   }
 }
 
-/* ============================================
-   Responsive Design
-   ============================================ */
+
 @media (max-width: 768px) {
   :root {
     --font-size-3xl: 1.5rem;
