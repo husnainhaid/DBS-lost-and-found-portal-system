@@ -6,41 +6,57 @@ const imagePreview = document.getElementById('imagePreview');
 const imagePreviewContainer = document.getElementById('imagePreviewContainer');
 
 
-imageInput.addEventListener('change', function (e) {
-    const file = e.target.files[0];
+reportForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
 
-    if (file) {
-       
-        if (!file.type.startsWith('image/')) {
-            showToast('Please select a valid image file', 'error');
-            imageInput.value = '';
-            return;
-        }
+    
+    const formData = {
+        studentName: document.getElementById('studentName').value.trim(),
+        itemName: document.getElementById('itemName').value.trim(),
+        description: document.getElementById('description').value.trim(),
+        location: document.getElementById('location').value,
+        dateLost: document.getElementById('dateLost').value,
+        category: document.getElementById('category').value,
+        email: document.getElementById('email').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        image: imagePreview.src || null
+    };
 
+    
+    if (!validateForm(formData)) return;
+
+    const submitBtn = reportForm.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Submitting...';
+
+    try {
         
-        if (file.size > 5 * 1024 * 1024) {
-            showToast('Image size should be less than 5MB', 'error');
-            imageInput.value = '';
-            return;
-        }
+        const result = await submitItem(formData);
 
-     
-        const reader = new FileReader();
+        showToast(
+            `Item "${result.itemName}" has been successfully reported!`,
+            'success',
+            5000,
+            'Report Submitted'
+        );
 
-        reader.onload = function (e) {
-            imagePreview.src = e.target.result;
-            imagePreviewContainer.classList.remove('hidden');
-        };
-
-        reader.onerror = function () {
-            showToast('Error reading image file', 'error');
-        };
-
-        reader.readAsDataURL(file);
-    } else {
-        
+        reportForm.reset();
         imagePreviewContainer.classList.add('hidden');
         imagePreview.src = '';
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        setTimeout(() => {
+            window.location.href = 'report.html';
+        }, 1500);
+
+    } catch (error) {
+        console.error(error);
+        showToast('Failed to submit report. Please try again.', 'error');
     }
+
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalText;
 });
 
